@@ -1,4 +1,4 @@
-package com.ishwar_arcore.explorebuddy.views.activities.main
+package com.ishwar_arcore.explorebuddy.views.activities.home
 
 import android.content.Context
 import android.content.Intent

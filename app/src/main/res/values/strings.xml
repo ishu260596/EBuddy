@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">ExploreBuddy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="plans">
+        <item>Trip</item>
+        <item>Biking</item>
+    </string-array>
+    <string-array name="budget">
+        <item>5K></item>
+        <item>5K-10K</item>
+        <item>10K-15K></item>
+        <item>15K-20K</item>
+        <item> 20K above</item>
+    </string-array>
+    <string-array name="prefer">
+        <item>Same Gender</item>
+        <item>Gender not an issue</item>
+    </string-array>
+    <string-array name="travel">
+        <item>Bus</item>
+        <item>Train</item>
+        <item>Air</item>
+    </string-array>
+    <string-array name="place">
+        <item>Beaches</item>
+        <item>Mountains</item>
+    </string-array>
+
+
 </resources>
