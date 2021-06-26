@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ishwar_arcore.explorebuddy.data.model.JoinGroupClass
 import com.ishwar_arcore.explorebuddy.databinding.ActivityViewGroupBinding
-import com.ishwar_arcore.explorebuddy.views.activities.main.JoinGroupAdapter
+import com.ishwar_arcore.explorebuddy.views.activities.home.JoinGroupAdapter
 
 class ViewGroupActivity : AppCompatActivity() {
 

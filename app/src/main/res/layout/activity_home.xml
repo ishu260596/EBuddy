@@ -7,7 +7,7 @@
     android:background="@color/background"
     android:orientation="vertical"
     android:weightSum="4"
-    tools:context=".views.activities.main.HomeActivity">
+    tools:context=".views.activities.home.HomeActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -26,9 +26,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="@dimen/_10sdp"
-            android:textSize="@dimen/_16sdp"
             android:text="Looking for a local friend??"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -48,10 +48,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="@dimen/_16sdp"
             android:padding="@dimen/_10sdp"
             android:text="Need a Companion"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -72,9 +72,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="@dimen/_10sdp"
-            android:textSize="@dimen/_16sdp"
             android:text="Want to join our group??"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -84,21 +84,22 @@
         android:layout_marginStart="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_40sdp"
-        android:layout_weight="1"
         android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_weight="1"
         android:elevation="@dimen/_50sdp"
         app:cardBackgroundColor="@color/backgroundbtn"
         app:cardCornerRadius="@dimen/_20sdp"
         app:cardMaxElevation="@dimen/_40sdp">
 
         <TextView
+            android:id="@+id/tvMakeGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="@dimen/_16sdp"
             android:padding="@dimen/_10sdp"
             android:text="Lets make a group??"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
 
     </androidx.cardview.widget.CardView>
 
