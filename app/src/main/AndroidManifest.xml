@@ -11,11 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExploreBuddy">
-        <activity android:name=".views.activities.makegroup.MakeGroupActivity"> <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
-        <activity android:name=".views.activities.splash.SplashActivity" />
+        <activity android:name=".views.activities.makegroup.MakeGroupActivity" />
+        <activity android:name=".views.activities.splash.SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".views.activities.signup.SignUpActivity" />
         <activity android:name=".views.activities.details.DetailActivity" />
         <activity android:name=".views.activities.home.HomeActivity" />
