@@ -3,17 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#34495E"
-    tools:context=".views.activities.home.HomeActivity">
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context=".views.activities.main.HomeActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_40sdp"
-        android:background="@color/white"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:layout_weight="1"
         android:elevation="@dimen/_50sdp"
+        app:cardBackgroundColor="@color/backgroundbtn"
         app:cardCornerRadius="@dimen/_20sdp"
         app:cardMaxElevation="@dimen/_40sdp">
 
@@ -22,17 +26,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="@dimen/_10sdp"
-            android:text="Looking for a group to join??"
-            android:textColor="@color/black" />
+            android:textSize="@dimen/_16sdp"
+            android:text="Looking for a local friend??"
+            android:textColor="@color/white" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_40sdp"
-        android:background="@color/white"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:layout_weight="1"
         android:elevation="@dimen/_50sdp"
+        app:cardBackgroundColor="@color/backgroundbtn"
         app:cardCornerRadius="@dimen/_20sdp"
         app:cardMaxElevation="@dimen/_40sdp">
 
@@ -40,18 +48,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textSize="@dimen/_16sdp"
             android:padding="@dimen/_10sdp"
             android:text="Need a Companion"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_40sdp"
-        android:background="@color/white"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:layout_weight="1"
         android:elevation="@dimen/_50sdp"
+        app:cardBackgroundColor="@color/backgroundbtn"
         app:cardCornerRadius="@dimen/_20sdp"
         app:cardMaxElevation="@dimen/_40sdp">
 
@@ -60,17 +72,22 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_16sdp"
             android:text="Want to join our group??"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_40sdp"
-        android:background="@color/white"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/_30sdp"
         android:elevation="@dimen/_50sdp"
+        app:cardBackgroundColor="@color/backgroundbtn"
         app:cardCornerRadius="@dimen/_20sdp"
         app:cardMaxElevation="@dimen/_40sdp">
 
@@ -78,9 +95,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textSize="@dimen/_16sdp"
             android:padding="@dimen/_10sdp"
             android:text="Lets make a group??"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
     </androidx.cardview.widget.CardView>
 

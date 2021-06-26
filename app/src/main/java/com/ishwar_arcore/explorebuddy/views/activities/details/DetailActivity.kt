@@ -146,8 +146,8 @@ class DetailActivity : AppCompatActivity() {
         addressLine2 = binding.etAddressLineTwo.text.toString()
         city = binding.etCity.text.toString()
         state = binding.etCity.text.toString()
-        pinCode = binding.etPincode.toString()
-        userPhone = binding.etPhoneNumber.toString()
+        pinCode = binding.etPincode.text.toString()
+        userPhone = binding.etPhoneNumber.text.toString()
 
 
 
