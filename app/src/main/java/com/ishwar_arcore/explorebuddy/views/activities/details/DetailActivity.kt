@@ -20,8 +20,8 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
 import com.ishwar_arcore.explorebuddy.databinding.ActivityDetailBinding
-import com.ishwar_arcore.explorebuddy.utils.Users
 import com.ishwar_arcore.explorebuddy.views.activities.home.HomeActivity
+import com.ishwar_arcore.explorebuddy.views.activities.users.UsersActivity
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -83,6 +83,8 @@ class DetailActivity : AppCompatActivity() {
 
         binding.btnSave.setOnClickListener {
             getUserDetails()
+            val intent = Intent(this,UsersActivity::class.java)
+            startActivity(intent);
         }
 
     }
