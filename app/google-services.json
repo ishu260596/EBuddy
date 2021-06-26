@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "550903493467",
+    "firebase_url": "https://ebuddy-81383-default-rtdb.firebaseio.com",
+    "project_id": "ebuddy-81383",
+    "storage_bucket": "ebuddy-81383.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550903493467:android:d330aa7579806e1dd5207e",
+        "android_client_info": {
+          "package_name": "com.ishwar_arcore.explorebuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550903493467-0u38ghjmdgrcg47vca9qie84bikih3i7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQH9uZP9SeJCFxzvgzXhxD4E5WZfUJt7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550903493467-0u38ghjmdgrcg47vca9qie84bikih3i7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
