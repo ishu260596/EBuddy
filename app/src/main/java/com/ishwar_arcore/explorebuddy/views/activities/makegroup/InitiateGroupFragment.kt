@@ -21,6 +21,13 @@ class InitiateGroupFragment : Fragment() {
     private lateinit var sTravel: Spinner
     private lateinit var sGo: Spinner
 
+    private lateinit var type: String
+    private lateinit var budget: String
+    private lateinit var prefer: String
+    private lateinit var travel: String
+    private lateinit var places: String
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -40,6 +47,7 @@ class InitiateGroupFragment : Fragment() {
         sGender = view.findViewById(R.id.sGender)
         sTravel = view.findViewById(R.id.sTravel)
         sGo = view.findViewById(R.id.sGo)
+
 
         val arr = arrayOf("Item1","Item2")
         sPlan.adapter = ArrayAdapter<String>(requireContext(),android.R.layout.simple_spinner_item,arr)
@@ -63,21 +71,37 @@ class InitiateGroupFragment : Fragment() {
         val arr2 = arrayOf("Item1","Item2")
         sBudget.adapter = ArrayAdapter<String>(requireContext(),android.R.layout.simple_spinner_item,arr)
 
-        sBudget.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        sBudget.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?,
                 position: Int,
                 id: Long
             ) {
-                Toast.makeText(requireContext(),"splan",Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "splan", Toast.LENGTH_SHORT).show()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                Toast.makeText(requireContext(),"nothing",Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "nothing", Toast.LENGTH_SHORT).show()
             }
+        }
+
+
+        /**   sPlan.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        override fun onItemSelected(
+        parent: AdapterView<*>?,
+        view: View?,
+        position: Int,
+        id: Long
+        ) {
+        Toast.makeText(requireContext(), position, Toast.LENGTH_SHORT).show()
+        }
+
+        override fun onNothingSelected(parent: AdapterView<*>?) {
 
         }
+
+        } **/
 
         val arr3 = arrayOf("Item1","Item2")
         sGender.adapter = ArrayAdapter<String>(requireContext(),android.R.layout.simple_spinner_item,arr)
@@ -135,6 +159,11 @@ class InitiateGroupFragment : Fragment() {
             }
 
         }
+
+        sPlan.setOnClickListener {
+
+        }
+
     }
 
     companion object {
