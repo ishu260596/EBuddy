@@ -22,7 +22,7 @@
             android:layout_margin="5dp"
             android:scaleType="centerCrop"
             android:visibility="gone"
-            app:srcCompat="@drawable/user_icon" />
+            app:srcCompat="@drawable/ic_user_1" />
 
         <TextView
             android:id="@+id/message"

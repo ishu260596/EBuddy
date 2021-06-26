@@ -48,13 +48,43 @@ class InitiateGroupFragment : Fragment() {
         sTravel = view.findViewById(R.id.sTravel)
         sGo = view.findViewById(R.id.sGo)
 
-        val plan = arrayOf("Trip", "Biking")
-        sPlan.adapter = ArrayAdapter<String>(
-            requireContext(),
-            android.R.layout.simple_spinner_dropdown_item,
-            plan
-        )
 
+        val arr = arrayOf("Item1","Item2")
+        sPlan.adapter = ArrayAdapter<String>(requireContext(),android.R.layout.simple_spinner_item,arr)
+
+        sPlan.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(requireContext(),"splan",Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Toast.makeText(requireContext(),"nothing",Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        val arr2 = arrayOf("Item1","Item2")
+        sBudget.adapter = ArrayAdapter<String>(requireContext(),android.R.layout.simple_spinner_item,arr)
+
+        sBudget.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(requireContext(), "splan", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Toast.makeText(requireContext(), "nothing", Toast.LENGTH_SHORT).show()
+            }
+        }
 
 
         /**   sPlan.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -73,37 +103,61 @@ class InitiateGroupFragment : Fragment() {
 
         } **/
 
-        ArrayAdapter.createFromResource(
-            requireContext(),
-            R.array.budget,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            sBudget.adapter = adapter
+        val arr3 = arrayOf("Item1","Item2")
+        sGender.adapter = ArrayAdapter<String>(requireContext(),android.R.layout.simple_spinner_item,arr)
+
+        sGender.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(requireContext(),"splan",Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Toast.makeText(requireContext(),"nothing",Toast.LENGTH_SHORT).show()
+            }
+
         }
-        ArrayAdapter.createFromResource(
-            requireContext(),
-            R.array.prefer,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            sGender.adapter = adapter
+
+        val arr4 = arrayOf("Item1","Item2")
+        sTravel.adapter = ArrayAdapter<String>(requireContext(),android.R.layout.simple_spinner_item,arr)
+
+        sTravel.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(requireContext(),"splan",Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Toast.makeText(requireContext(),"nothing",Toast.LENGTH_SHORT).show()
+            }
+
         }
-        ArrayAdapter.createFromResource(
-            requireContext(),
-            R.array.travel,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            sTravel.adapter = adapter
-        }
-        ArrayAdapter.createFromResource(
-            requireContext(),
-            R.array.place,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            sGo.adapter = adapter
+
+        val arr5 = arrayOf("Item1","Item2")
+        sGo.adapter = ArrayAdapter<String>(requireContext(),android.R.layout.simple_spinner_item,arr)
+
+        sGo.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(requireContext(),"splan",Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Toast.makeText(requireContext(),"nothing",Toast.LENGTH_SHORT).show()
+            }
+
         }
 
         sPlan.setOnClickListener {
