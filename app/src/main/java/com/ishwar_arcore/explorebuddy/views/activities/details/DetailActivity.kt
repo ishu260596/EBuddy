@@ -150,103 +150,85 @@ class DetailActivity : AppCompatActivity() {
         userPhone = binding.etPhoneNumber.toString()
 
 
-        /**
+
         if (age.toInt() < 18) {
-        Toast.makeText(this, "You are not adult !", Toast.LENGTH_SHORT).show()
-        stopAnimation()
-        return
-        }
+            Toast.makeText(this, "You are not adult !", Toast.LENGTH_SHORT).show()
+            stopAnimation()
+            return
+        } else if (gender.isEmpty()) {
+            Toast.makeText(this, "please select your gender !", Toast.LENGTH_SHORT).show()
+            stopAnimation()
+            return
+        } else if (addressLine1.isEmpty()) {
+            binding.etAddressLineOne.error = "please fill your address !"
+            stopAnimation()
+            return
+        } else if (addressLine2.isEmpty()) {
+            binding.etAddressLineTwo.error = "please fill your address !"
+            stopAnimation()
+            return
+        } else if (city.isEmpty()) {
+            binding.etCity.error = "please fill your city !"
+            stopAnimation()
+            return
+        } else if (state.isEmpty()) {
+            binding.etState.error = "please fill your state !"
+            stopAnimation()
+            return
+        } else if (userName.isEmpty()) {
+            binding.etName.error = "please fill your name !"
+            stopAnimation()
+            return
+        } else if (userPhone.isEmpty()) {
+            binding.etPhoneNumber.error = "please fill your phone number !"
+            stopAnimation()
+            return
+        } else if (pinCode.isEmpty()) {
+            binding.etPincode.error = "please fill your phone number !"
+            stopAnimation()
+            return
+        } else {
 
-        if (gender.isEmpty()) {
-        Toast.makeText(this, "please select your gender !", Toast.LENGTH_SHORT).show()
-        stopAnimation()
-        return
-        }
+            /** val users = Users(userId, profileImage, userName,
+            gender, age, addressLine1, addressLine2,
+            city, state, pinCode, userPhone
+            )**/
 
-        if (addressLine1.isEmpty()) {
-        binding.etAddressLineOne.error = "please fill your address !"
-        stopAnimation()
-        return
-        }
-        if (addressLine2.isEmpty()) {
-        binding.etAddressLineTwo.error = "please fill your address !"
-        stopAnimation()
-        return
-        }
-        if (city.isEmpty()) {
-        binding.etCity.error = "please fill your city !"
-        stopAnimation()
-        return
-        }
-        if (state.isEmpty()) {
-        binding.etState.error = "please fill your state !"
-        stopAnimation()
-        return
-        }
-        if (userName.isEmpty()) {
-        binding.etName.error = "please fill your name !"
-        stopAnimation()
-        return
-        }
-        if (userPhone.isEmpty()) {
-        binding.etPhoneNumber.error = "please fill your phone number !"
-        stopAnimation()
-        return
-        }
-        if (pinCode.isEmpty()) {
-        binding.etPincode.error = "please fill your phone number !"
-        stopAnimation()
-        return
-        }
-         **/
+            val userMap: HashMap<String, String> = HashMap<String, String>()
+            userMap["id"] = userId
+            userMap["profile"] = profileImage
+            userMap["name"] = userName
+            userMap["gender"] = gender
+            userMap["age"] = userAge
+            userMap["addressone"] = addressLine1
+            userMap["addresstwo"] = addressLine2
+            userMap["city"] = city
+            userMap["state"] = state
+            userMap["pincode"] = pinCode
+            userMap["phonenumber"] = userPhone
 
-        val users = Users(
-            userId,
-            profileImage,
-            userName,
-            gender,
-            age,
-            addressLine1,
-            addressLine2,
-            city,
-            state,
-            pinCode,
-            userPhone
-        )
-
-        /** val userMap: HashMap<String, String> = HashMap<String, String>()
-        userMap["id"] = userId
-        userMap["profile"] = profileImage
-        userMap["name"] = userName
-        userMap["gender"] = gender
-        userMap["age"] = userAge
-        userMap["addressone"] = addressLine1
-        userMap["addresstwo"] = addressLine2
-        userMap["city"] = city
-        userMap["state"] = state
-        userMap["pincode"] = pinCode
-        userMap["phonenumber"] = userPhone **/
-
-        databaseRef.child("Users").child(userId)
-            .setValue(users)
-            .addOnCompleteListener {
-                Toast.makeText(
-                    this,
-                    "User has been registered successfully !",
-                    Toast.LENGTH_LONG
-                ).show()
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-            .addOnFailureListener {
-                Toast.makeText(
-                    this,
-                    "Failed to register! Try again",
-                    Toast.LENGTH_LONG
-                ).show()
-                stopAnimation()
-            }
+            databaseRef.child("Users").child(userId)
+                .setValue(userMap)
+                .addOnCompleteListener {
+                    Toast.makeText(
+                        this,
+                        "User has been registered successfully !",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    stopAnimation()
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .addOnFailureListener {
+                    Toast.makeText(
+                        this,
+                        "Failed to register! Try again",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    stopAnimation()
+                }
+        }
     }
 
     private fun stopAnimation() {
