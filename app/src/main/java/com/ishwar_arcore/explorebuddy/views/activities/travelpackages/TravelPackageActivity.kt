@@ -3,6 +3,7 @@ package com.ishwar_arcore.explorebuddy.views.activities.travelpackages
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -30,7 +31,7 @@ class TravelPackageActivity : AppCompatActivity() {
 
         packagesAdapter = TravelPackagesAdapter(packageList)
         binding.rvTravelPackages.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            GridLayoutManager(this,2);
         binding.rvTravelPackages.adapter = packagesAdapter
 
         packageList.add(PackageClass("Best Of Kashmir","Srinagar","19,900","5 Nights"))
