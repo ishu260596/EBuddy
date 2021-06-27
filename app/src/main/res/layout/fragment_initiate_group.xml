@@ -199,7 +199,6 @@
 
         </androidx.cardview.widget.CardView>
 
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="@dimen/_80sdp"
@@ -225,10 +224,7 @@
                     android:textSize="@dimen/_25sdp"
                     android:textStyle="bold" />
             </LinearLayout>
-
-
         </androidx.cardview.widget.CardView>
-
 
     </LinearLayout>
 
