@@ -49,6 +49,7 @@ public class ChatActivity extends AppCompatActivity {
         receiverRoom = receiverUid + senderUid;
 
         database = FirebaseDatabase.getInstance();
+
         database.getReference().child("chats")
                 .child(senderRoom)
                 .child("messages")
@@ -86,7 +87,7 @@ public class ChatActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void unused) {
                         database.getReference().child("chats")
-                                .child(senderRoom)
+                                .child(receiverRoom)
                                 .child("messages")
                                 .push()
                                 .setValue(message).addOnSuccessListener(new OnSuccessListener<Void>() {
