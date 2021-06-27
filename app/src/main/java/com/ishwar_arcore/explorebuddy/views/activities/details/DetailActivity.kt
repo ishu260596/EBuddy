@@ -84,7 +84,6 @@ class DetailActivity : AppCompatActivity() {
 
         binding.btnSave.setOnClickListener {
             getUserDetails()
-
         }
 
     }
@@ -95,9 +94,10 @@ class DetailActivity : AppCompatActivity() {
         }
         mAuth = FirebaseAuth.getInstance()
         val firebaseUser = mAuth.currentUser
-            userId = firebaseUser!!.uid
-
-        profilePicRef = FirebaseStorage.getInstance().reference.child("ProfileImages")
+        if (firebaseUser != null) {
+            userId = firebaseUser.uid
+        }
+        profilePicRef = FirebaseStorage.getInstance().reference.child("Profile Images")
         databaseRef = FirebaseDatabase.getInstance().reference
 
         calendar = Calendar.getInstance()
@@ -135,13 +135,13 @@ class DetailActivity : AppCompatActivity() {
 
     private fun getUserDetails() {
         binding.btnSave.playAnimation()
-
         binding.progressbar.visibility = View.VISIBLE
-
         age = (2021 - year.toInt()).toString()
-
+        Log.d("tag", age)
+        Toast.makeText(this, age.toString(), Toast.LENGTH_SHORT).show()
         val sexId = binding.radioGroup.checkedRadioButtonId
         sex = findViewById(sexId)
+        Toast.makeText(this, sex.text, Toast.LENGTH_SHORT).show()
 
         userName = binding.etName.text.toString()
         gender = sex.text.toString()
@@ -221,11 +221,8 @@ class DetailActivity : AppCompatActivity() {
                         Toast.LENGTH_LONG
                     ).show()
                     stopAnimation()
-//                    val intent = Intent(this, HomeActivity::class.java)
-//                    startActivity(intent)
-//                    finish()
-                    val intent = Intent(this,UsersActivity::class.java)
-                    startActivity(intent);
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
                     finish()
                 }
                 .addOnFailureListener {
