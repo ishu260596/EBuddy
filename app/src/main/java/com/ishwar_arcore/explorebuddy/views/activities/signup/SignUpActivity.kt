@@ -56,6 +56,7 @@ class SignUpActivity : AppCompatActivity() {
                     Toast.makeText(this, "Register successfully", Toast.LENGTH_SHORT).show()
                     binding.progressBar.visibility = View.GONE
                     val intent = Intent(this, DetailActivity::class.java)
+                    intent.putExtra("email", binding.etEmail.text.toString())
                     startActivity(intent)
                     finish()
                 } else {

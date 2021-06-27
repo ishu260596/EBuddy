@@ -20,8 +20,8 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
 import com.ishwar_arcore.explorebuddy.databinding.ActivityDetailBinding
-import com.ishwar_arcore.explorebuddy.utils.Users
 import com.ishwar_arcore.explorebuddy.views.activities.home.HomeActivity
+import com.ishwar_arcore.explorebuddy.views.activities.users.UsersActivity
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -35,6 +35,7 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
 
     private lateinit var userName: String
+    private lateinit var userEmail: String
     private lateinit var userPhone: String
     private lateinit var userAge: String
     private lateinit var gender: String
@@ -88,6 +89,9 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        if (intent.extras != null) {
+            userEmail = intent.getStringExtra("email").toString()
+        }
         mAuth = FirebaseAuth.getInstance()
         val firebaseUser = mAuth.currentUser
         if (firebaseUser != null) {
@@ -198,6 +202,7 @@ class DetailActivity : AppCompatActivity() {
             userMap["id"] = userId
             userMap["profile"] = profileImage
             userMap["name"] = userName
+            userMap["email"] = userEmail
             userMap["gender"] = gender
             userMap["age"] = userAge
             userMap["addressone"] = addressLine1

@@ -6,8 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ishwar_arcore.explorebuddy.R
 import com.ishwar_arcore.explorebuddy.data.model.JoinGroupClass
 import com.ishwar_arcore.explorebuddy.databinding.ActivityViewGroupBinding
-import com.ishwar_arcore.explorebuddy.views.activities.main.JoinGroupAdapter
-import com.ramotion.foldingcell.FoldingCell
+import com.ishwar_arcore.explorebuddy.views.activities.home.JoinGroupAdapter
 
 class ViewGroupActivity : AppCompatActivity() {
 
@@ -17,8 +16,6 @@ class ViewGroupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
 
         groupbinding = ActivityViewGroupBinding.inflate(layoutInflater)
         val view = groupbinding.root

@@ -1,106 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    android:weightSum="4"
     tools:context=".views.activities.home.HomeActivity">
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llLayout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_40sdp"
-        android:layout_weight="1"
-        android:elevation="@dimen/_50sdp"
-        app:cardBackgroundColor="@color/backgroundbtn"
-        app:cardCornerRadius="@dimen/_20sdp"
-        app:cardMaxElevation="@dimen/_40sdp">
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:background="@drawable/home_card_background"
+        android:padding="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="@dimen/_10sdp"
-            android:text="Looking for a local friend??"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_16sdp" />
+            android:padding="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@id/cvFour"
+            app:layout_constraintEnd_toStartOf="@+id/cvTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="144dp"
+                android:layout_height="162dp"
+                android:background="@color/backgroundbtn"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="Loking \nfor a \nlocal friend?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_40sdp"
-        android:layout_weight="1"
-        android:elevation="@dimen/_50sdp"
-        app:cardBackgroundColor="@color/backgroundbtn"
-        app:cardCornerRadius="@dimen/_20sdp"
-        app:cardMaxElevation="@dimen/_40sdp">
-
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="@dimen/_10sdp"
-            android:text="Need a Companion"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_16sdp" />
+            app:layout_constraintBottom_toTopOf="@id/cvFour"
+            app:layout_constraintEnd_toEndOf="@id/cvThree"
+            app:layout_constraintStart_toStartOf="@id/cvThree"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="177dp"
+                android:layout_height="212dp"
+                android:background="@color/backgroundbtn"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="Looking \nfor best \npackages?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_40sdp"
-        android:layout_weight="1"
-        android:elevation="@dimen/_50sdp"
-        app:cardBackgroundColor="@color/backgroundbtn"
-        app:cardCornerRadius="@dimen/_20sdp"
-        app:cardMaxElevation="@dimen/_40sdp">
-
-        <TextView
-            android:id="@+id/tvJoinGroup"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="@dimen/_10sdp"
-            android:text="Want to join our group??"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_16sdp" />
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cvFour"
+            app:layout_constraintTop_toBottomOf="@+id/cvTwo">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/makeGroup"
+                android:layout_width="147dp"
+                android:layout_height="156dp"
+                android:background="@color/backgroundbtn"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="Let's make\n a group !"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_40sdp"
-        android:layout_marginBottom="@dimen/_30sdp"
-        android:layout_weight="1"
-        android:elevation="@dimen/_50sdp"
-        app:cardBackgroundColor="@color/backgroundbtn"
-        app:cardCornerRadius="@dimen/_20sdp"
-        app:cardMaxElevation="@dimen/_40sdp">
-
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cvThree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvOne">
+
+            <TextView
+                android:id="@+id/tvJoinGroup"
+                android:layout_width="179dp"
+                android:layout_height="227dp"
+                android:background="@color/backgroundbtn"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="want \n to join\nour group?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="sans-serif-black"
             android:padding="@dimen/_10sdp"
-            android:text="Lets make a group??"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_16sdp" />
+            android:text="search friends"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
