@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -12,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.ishwar_arcore.explorebuddy.R;
 import com.ishwar_arcore.explorebuddy.databinding.ActivityUsersBinding;
-import com.ishwar_arcore.explorebuddy.utils.User;
+import com.ishwar_arcore.explorebuddy.utils.Traveller;
 import com.ishwar_arcore.explorebuddy.utils.UsersAdapter;
 
 import org.jetbrains.annotations.NotNull;
@@ -23,7 +24,7 @@ public class UsersActivity extends AppCompatActivity {
 
     ActivityUsersBinding binding;
     FirebaseDatabase database;
-    ArrayList<User> users;
+    ArrayList<Traveller> travellers;
     UsersAdapter usersAdapter;
 
     @Override
@@ -33,22 +34,22 @@ public class UsersActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         database = FirebaseDatabase.getInstance();
-        users = new ArrayList<>();
-        usersAdapter = new UsersAdapter(this,users);
+        travellers = new ArrayList<>();
+        usersAdapter = new UsersAdapter(this, travellers);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(usersAdapter);
 
-        database.getReference().child("Users").addValueEventListener(new ValueEventListener() {
+        database.getReference("Users").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                users.clear();
+                travellers.clear();
 
-                for (DataSnapshot snapshot1 : snapshot.getChildren()){
-                    User user = snapshot1.getValue(User.class);
-                    users.add(user);
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Traveller traveller = dataSnapshot.getValue(Traveller.class);
+                    Log.d("TAG",traveller.getUserName());
+                    travellers.add(traveller);
                 }
                 usersAdapter.notifyDataSetChanged();
-
             }
 
             @Override

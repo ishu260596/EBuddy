@@ -11,36 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExploreBuddy">
-<<<<<<< HEAD
 
-        <activity android:name=".views.activities.users.UsersActivity">
-
-
-        </activity>
+        <activity android:name=".views.activities.users.UsersActivity"/>
 
         <activity android:name=".views.activities.chat.ChatActivity"/>
         <activity android:name=".views.activities.splash.SplashActivity">
 
-=======
-        <activity android:name=".views.activities.makegroup.MakeGroupActivity" >
->>>>>>> fba5dbed8f79b8c047bd88e6eeedc658e2446a6b
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-<<<<<<< HEAD
 
-=======
         </activity>
-        <activity android:name=".views.activities.splash.SplashActivity" >
->>>>>>> fba5dbed8f79b8c047bd88e6eeedc658e2446a6b
-        </activity>
+
+        <activity android:name=".views.activities.makegroup.MakeGroupActivity" />
+
         <activity android:name=".views.activities.signup.SignUpActivity" />
-        <activity android:name=".views.activities.details.DetailActivity"></activity>
 
-        <activity android:name=".views.activities.makegroup.MakeGroupActivity">
-
-        </activity>
+        <activity android:name=".views.activities.details.DetailActivity"/>
 
         <activity android:name=".views.activities.home.HomeActivity" />
         <activity android:name=".views.activities.signin.SignInActivity" />

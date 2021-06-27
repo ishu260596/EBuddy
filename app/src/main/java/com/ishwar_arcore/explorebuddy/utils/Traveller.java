@@ -1,10 +1,11 @@
 package com.ishwar_arcore.explorebuddy.utils;
 
-public class User {
+public class Traveller {
 
     private String userId;
     private String profilePic;
     private String userName;
+    private String email;
     private String sex;
     private String age;
     private String addressone;
@@ -14,13 +15,14 @@ public class User {
     private String pincode;
     private String mobile;
 
-    public User() {
+    public Traveller() {
     }
 
-    public User(String userId, String profilePic, String userName, String sex, String age, String addressone, String addresstwo, String city, String state, String pincode, String mobile) {
+    public Traveller(String userId, String profilePic, String userName, String email, String sex, String age, String addressone, String addresstwo, String city, String state, String pincode, String mobile) {
         this.userId = userId;
         this.profilePic = profilePic;
         this.userName = userName;
+        this.email = email;
         this.sex = sex;
         this.age = age;
         this.addressone = addressone;
@@ -29,6 +31,14 @@ public class User {
         this.state = state;
         this.pincode = pincode;
         this.mobile = mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUserId() {

@@ -84,8 +84,7 @@ class DetailActivity : AppCompatActivity() {
 
         binding.btnSave.setOnClickListener {
             getUserDetails()
-            val intent = Intent(this,UsersActivity::class.java)
-            startActivity(intent);
+
         }
 
     }
@@ -223,8 +222,11 @@ class DetailActivity : AppCompatActivity() {
                         Toast.LENGTH_LONG
                     ).show()
                     stopAnimation()
-                    val intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
+//                    val intent = Intent(this, HomeActivity::class.java)
+//                    startActivity(intent)
+//                    finish()
+                    val intent = Intent(this,UsersActivity::class.java)
+                    startActivity(intent);
                     finish()
                 }
                 .addOnFailureListener {
