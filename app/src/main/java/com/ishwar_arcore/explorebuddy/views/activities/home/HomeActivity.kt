@@ -7,7 +7,9 @@ import android.view.View
 import com.ishwar_arcore.explorebuddy.R
 import com.ishwar_arcore.explorebuddy.databinding.ActivityDetailBinding
 import com.ishwar_arcore.explorebuddy.databinding.ActivityHomeBinding
+import com.ishwar_arcore.explorebuddy.views.activities.groupview.ViewGroupActivity
 import com.ishwar_arcore.explorebuddy.views.activities.makegroup.MakeGroupActivity
+import com.ishwar_arcore.explorebuddy.views.activities.travelpackages.TravelPackageActivity
 import com.ishwar_arcore.explorebuddy.views.activities.users.UsersActivity
 
 class HomeActivity : AppCompatActivity() {
@@ -17,17 +19,27 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
         binding.makeGroup.setOnClickListener {
             val intent = Intent(this, MakeGroupActivity::class.java)
             startActivity(intent)
 
-
-            binding.tvSearch.setOnClickListener(View.OnClickListener {
-
-                val intent = Intent(this, UsersActivity::class.java)
-                startActivity(intent)
-
-            })
         }
+        binding.tvSearch.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, UsersActivity::class.java)
+            startActivity(intent)
+
+        })
+
+        binding.cvFour.setOnClickListener {
+            val intent = Intent(this, ViewGroupActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cvTwo.setOnClickListener {
+            val intent = Intent(this,TravelPackageActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

@@ -17,13 +17,10 @@ import java.nio.channels.MembershipKey
 class JoinGroupAdapter(private val groupsList: List<JoinGroupClass>,private var context: Context) :
     RecyclerView.Adapter<JoinGroupAdapter.JoinGroupViewHolder>() {
 
-
-
     inner class JoinGroupViewHolder(val binding: JoingroupItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JoinGroupViewHolder {
         val view = JoingroupItemLayoutBinding.inflate(
@@ -36,9 +33,9 @@ class JoinGroupAdapter(private val groupsList: List<JoinGroupClass>,private var 
     override fun onBindViewHolder(holder: JoinGroupViewHolder, position: Int) {
         with(holder) {
             with(groupsList[position]) {
-                binding.tvMembers.text = this.members
-                binding.tvPlace.text = this.place
-                binding.tvVehicles.text = this.vehicle
+                binding.tvTime.text = this.time
+                binding.tvPlaceName.text = this.place
+                binding.ivPlaceImage.setImageResource(this.image)
                 binding.tvViewGroup.setOnClickListener {
                     val intent = Intent(context, ViewFriendsActivity::class.java)
                     context.startActivity(intent)

@@ -3,6 +3,7 @@ package com.ishwar_arcore.explorebuddy.views.activities.groupview
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ishwar_arcore.explorebuddy.R
 import com.ishwar_arcore.explorebuddy.data.model.JoinGroupClass
 import com.ishwar_arcore.explorebuddy.databinding.ActivityViewGroupBinding
 import com.ishwar_arcore.explorebuddy.views.activities.home.JoinGroupAdapter
@@ -26,9 +27,9 @@ class ViewGroupActivity : AppCompatActivity() {
         groupsAdapter = JoinGroupAdapter(groupList, this)
         groupbinding.rvJoinGroup.adapter = groupsAdapter
 
-        groupList.add(JoinGroupClass("Manali", "4", "No Vehicle"))
-        groupList.add(JoinGroupClass("Kerala", "5", "Car"))
-        groupList.add(JoinGroupClass("Shimla", "3", "Bus"))
+        groupList.add(JoinGroupClass("Manali","Aug 2 - Aug 15",R.drawable.manali))
+        groupList.add(JoinGroupClass("Kerala", "July 4 - July 14",R.drawable.kerala))
+        groupList.add(JoinGroupClass("Shimla", "July 2 - July 25", R.drawable.kashmir))
 
     }
 }

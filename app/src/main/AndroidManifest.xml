@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExploreBuddy">
         <activity android:name=".views.activities.users.UsersActivity"/>
+        <activity android:name=".views.activities.groupview.ViewGroupActivity"/>
+        <activity android:name=".views.activities.travelpackages.TravelPackageActivity"/>
         <activity android:name=".views.activities.chat.ChatActivity"/>
         <activity android:name=".views.activities.splash.SplashActivity">
             <intent-filter>
