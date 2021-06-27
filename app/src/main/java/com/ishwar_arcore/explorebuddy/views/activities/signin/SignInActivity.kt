@@ -31,7 +31,7 @@ class SignInActivity : AppCompatActivity() {
 
     }
 
-   /** override fun onStart() {
+    override fun onStart() {
         super.onStart()
         val user = mAuth.currentUser
         if (user != null) {
@@ -42,7 +42,7 @@ class SignInActivity : AppCompatActivity() {
     private fun redirect() {
         startActivity(Intent(this, HomeActivity::class.java))
         finish()
-    }**/
+    }
 
     private fun logInUser() {
         val email = binding.etEmail.text.toString()
