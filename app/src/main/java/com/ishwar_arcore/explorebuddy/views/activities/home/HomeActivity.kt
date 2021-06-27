@@ -15,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        binding.tvMakeGroup.setOnClickListener {
+        binding.makeGroup.setOnClickListener {
             val intent = Intent(this, MakeGroupActivity::class.java)
             startActivity(intent)
         }

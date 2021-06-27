@@ -84,8 +84,6 @@ class DetailActivity : AppCompatActivity() {
 
         binding.btnSave.setOnClickListener {
             getUserDetails()
-            val intent = Intent(this,UsersActivity::class.java)
-            startActivity(intent);
         }
 
     }
