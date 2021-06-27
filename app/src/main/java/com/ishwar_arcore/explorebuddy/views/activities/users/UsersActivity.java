@@ -9,6 +9,7 @@ import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.ishwar_arcore.explorebuddy.R;
@@ -24,6 +25,7 @@ public class UsersActivity extends AppCompatActivity {
 
     ActivityUsersBinding binding;
     FirebaseDatabase database;
+    DatabaseReference reference;
     ArrayList<Traveller> travellers;
     UsersAdapter usersAdapter;
 
@@ -39,14 +41,15 @@ public class UsersActivity extends AppCompatActivity {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(usersAdapter);
 
-        database.getReference("Users").addValueEventListener(new ValueEventListener() {
+        reference = database.getReference().child("Users");
+
+        reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 travellers.clear();
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Traveller traveller = dataSnapshot.getValue(Traveller.class);
-                    Log.d("TAG",traveller.getUserName());
                     travellers.add(traveller);
                 }
                 usersAdapter.notifyDataSetChanged();
