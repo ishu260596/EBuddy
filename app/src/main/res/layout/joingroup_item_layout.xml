@@ -26,7 +26,7 @@
             <ImageView
                 android:id="@+id/ivPlaceImage"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="@dimen/_180sdp"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -48,8 +48,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintStart_toStartOf="@+id/ivPlaceImage"
-                app:layout_constraintTop_toBottomOf="@+id/tvPlaceName" />
+                app:layout_constraintStart_toStartOf="@+id/tvPlaceName"
+                android:textColor="#2E86C1"
+                app:layout_constraintTop_toBottomOf="@+id/ivPlaceImage" />
 
             <TextView
                 android:id="@+id/tvViewGroup"
@@ -57,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:drawableRight="@drawable/ic_baseline_navigate_next_24"
                 android:drawablePadding="@dimen/_2sdp"
-                android:text="View More"
+                android:text="View Details"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/ivPlaceImage"
                 app:layout_constraintTop_toTopOf="@id/ivPlaceImage" />

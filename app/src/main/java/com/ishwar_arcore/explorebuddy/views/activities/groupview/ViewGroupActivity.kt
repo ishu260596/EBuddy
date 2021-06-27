@@ -29,7 +29,7 @@ class ViewGroupActivity : AppCompatActivity() {
 
         groupList.add(JoinGroupClass("Manali","Aug 2 - Aug 15",R.drawable.manali))
         groupList.add(JoinGroupClass("Kerala", "July 4 - July 14",R.drawable.kerala))
-        groupList.add(JoinGroupClass("Shimla", "July 2 - July 25", R.drawable.kashmir))
+        groupList.add(JoinGroupClass("Kashmir", "July 2 - July 25", R.drawable.kashmir))
 
     }
 }
