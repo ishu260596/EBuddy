@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_20sdp"
+    android:layout_margin="@dimen/_15sdp"
+    android:background="@color/background"
     android:elevation="@dimen/_40sdp"
-    app:cardCornerRadius="@dimen/_10sdp"
     app:cardMaxElevation="@dimen/_40sdp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:background="@color/background"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_margin="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundbtn"
         android:orientation="vertical">
 
         <TextView
