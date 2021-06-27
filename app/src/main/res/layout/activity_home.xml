@@ -36,9 +36,9 @@
                 android:background="@color/backgroundbtn"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center"
-                android:text="Loking \nfor a \nlocal friend"
+                android:text="Loking \nfor a \nlocal friend?"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_16sdp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -56,9 +56,9 @@
                 android:background="@color/backgroundbtn"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center"
-                android:text="Loking \nfor best \npackages"
+                android:text="Looking \nfor best \npackages?"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_16sdp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -78,9 +78,9 @@
                 android:background="@color/backgroundbtn"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center"
-                android:text="Let's make\n a group"
+                android:text="Let's make\n a group !"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_16sdp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -98,9 +98,28 @@
                 android:background="@color/backgroundbtn"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center"
-                android:text="want \n to join\nour group"
+                android:text="want \n to join\nour group?"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_16sdp" />
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="sans-serif-black"
+            android:padding="@dimen/_10sdp"
+            android:text="search friends"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
