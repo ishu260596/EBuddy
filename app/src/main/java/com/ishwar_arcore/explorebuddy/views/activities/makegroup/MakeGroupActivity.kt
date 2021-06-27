@@ -2,6 +2,7 @@ package com.ishwar_arcore.explorebuddy.views.activities.makegroup
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
@@ -23,13 +24,11 @@ class MakeGroupActivity : AppCompatActivity() {
         val list = arrayListOf<Fragment>(
             InitiateGroupFragment.newInstance(),
             JoinGroupFragment.newInstance()
-            )
+        )
 
         viewPagerAdapter = MainViewPagerAdapter(this, list)
         binding.mainViewPager.adapter = viewPagerAdapter
-
         //val draw = Drawable.createFromResourceStream(R.drawable.icon_home,)
-
         TabLayoutMediator(binding.mainTabLayout, binding.mainViewPager) { tab, position ->
             tab.icon = when (position) {
                 0 -> ContextCompat.getDrawable(this, R.drawable.ic_baseline_group_add_24)
@@ -37,5 +36,12 @@ class MakeGroupActivity : AppCompatActivity() {
             }
 
         }.attach()
+    }
+
+
+    fun launchActivity(communicator: Communication) {
+        if (communicator != null) {
+            Toast.makeText(this, "hi from fragment", Toast.LENGTH_SHORT).show()
+        }
     }
 }
