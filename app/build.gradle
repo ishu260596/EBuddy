@@ -74,6 +74,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutineVersion"
 
-    implementation 'com.ramotion.expandingcollection:expanding-collection:0.9.2'
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+
 
 }
